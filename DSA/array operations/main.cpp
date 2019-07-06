@@ -72,8 +72,7 @@ public:
 main()
 {
     Array ar;
-    int choice;
-    choice = 0;
+    int choice=0;
 
     ar.array_formation();
     while(choice !=7)
