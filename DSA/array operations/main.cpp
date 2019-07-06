@@ -1,118 +1,128 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class Array
+class Data
 {
-    int a[100],top=-1,n,temp;
+protected:
+    int a[100],n,i,temp,top=(-1);
 public:
-    void array_formation()
-    {
-        cout << "Enter the number of elements you want to enter in Array : ";
-        cin >> n;
-        cout << "Enter your array values : " << endl;
-        for(int i=0;i<n;i++)
-        {
-            cin >> a[i];
-            top = i;
-        }
-    }
     void Display()
     {
-        cout << endl << "Your array is : " << endl;
-        for(int i=0;i<=top;i++)
+        cout << "Your array is : " << endl;
+        for(i=0;i<=top;i++)
         {
-            cout << "-------------------" << endl;
-            cout << "|\t" << a[i] << "\t|" << endl;
-            cout << "-------------------" << endl;
+            cout << a[i] << endl;
         }
     }
-    void Insert()
+    //Insert
+    void insertlast()
     {
-        cout << "Enter the position you want to enter new element : " << endl;
+        if(top<=100)
+        {
+            top =  top + 1;
+            cout << "Enter the value you want to enter at last : ";
+            cin >> temp;
+            a[top] = temp;
+        }
+        else
+        {
+            cout << "Array overflow" << endl;
+        }
+    }
+    void inserti()
+    {
+        cout << "Enter the position you want to enter value : ";
         cin >> n;
-        cout << "Enter your new value : " << endl;
-        cin >> temp;
-        for(int i=top;i>(n-1);i--)
+
+        if(n<=top)
         {
-            a[i+1] = a[i];
+            cout << "Enter value : ";
+            cin >> temp;
+            for(i=top;i>=n;i--)
+            {
+                a[i+1] = a[i];
+            }
+            a[n] = temp;
+            top = top + 1;
         }
-        a[n] = temp;
-        top = top + 1;
+        else
+        {
+            cout << "Position doesn't exist" << endl;
+        }
     }
-    void Delete()
+
+    //Delete
+    void deletelast()
     {
-        cout << "Enter the position you want to delete : " << endl;
+        if(top > (-1))
+        {
+            top = top - 1;
+        }
+        else
+        {
+            cout << "Array underflow" << endl;
+        }
+    }
+    void deletei()
+    {
+        cout << "Enter the position you want to delete value : ";
         cin >> n;
-        for(int i=n;i<top;i++)
+
+        if(n<=top)
         {
-            a[i] = a[i+1];
+            for(i=n;i<=top;i++)
+            {
+                a[i] = a[i+1];
+            }
+            top = top - 1;
         }
-        top = top - 1;
-    }
-    void InsertFirst()
-    {
-        for(int i=top;i>(-1);i--)
+        else
         {
-            a[i+1] = a[i];
+            cout << "Position doesn't exist" << endl;
         }
-        cout << "Enter the value you want to add at first : " << endl;
-        cin >> temp;
-        a[0] = temp;
-        top = top + 1;
-    }
-    void InsertLast()
-    {
-        top = top + 1;
-        cout << "Enter the value you want to insert at last : " << endl;
-        cin >> temp;
-        a[top] = temp;
     }
 };
 
+
 main()
 {
-    Array ar;
+    Data arr;
     int choice=0;
 
-    ar.array_formation();
-    while(choice !=7)
+    while(choice!=100)
     {
-        cout << endl << endl << "----- Stack -----" << endl;
-        cout << "0. Display array" << endl;
-        cout << "1. Insert element at ith position" << endl;
-        cout << "2. Delete element at ith position" << endl;
-        cout << "3. Insert after key" << endl;
-        cout << "4. Insert before key" << endl;
-        cout << "5. Insert first" << endl;
-        cout << "6. Insert last" << endl;
-        cout << "7. Exit" << endl;
-        cout << endl << "Enter your choice : " << endl;
+        cout << "-------- Array Operations ---------" << endl;
+        cout << "0. Display Array" << endl;
+        cout << "1. Enter element at last" << endl;
+        cout << "2. Delete element at last" << endl;
+        cout << "3. Insert at ith position" << endl;
+        cout << "4. Delete at ith postion" << endl;
 
+        cout << endl << "Enter your choice : ";
         cin >> choice;
         switch(choice)
         {
         case 0:
-            ar.Display();
+            arr.Display();
             break;
         case 1:
-            ar.Insert();
+            arr.insertlast();
             break;
         case 2:
-            ar.Delete();
+            arr.deletelast();
             break;
-        case 5:
-            ar.InsertFirst();
+        case 3:
+            arr.inserti();
             break;
-        case 6:
-            ar.InsertLast();
+        case 4:
+            arr.deletei();
             break;
-        case 7:
-            cout << "Thank you !!!" << endl;
+        case 100:
+            cout << "Thank you !" << endl;
             break;
         default:
-            cout << "Invalid choice" << endl;
+            cout << "Invalid Choice" << endl;
         }
-
-        cout << endl <<  "------------------------------------" << endl;
+        cout << "-----------------------------------" << endl;
     }
 }
