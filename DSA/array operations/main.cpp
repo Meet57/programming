@@ -30,7 +30,7 @@ public:
                     }
                 }
             }
-            cout << "Array sorted " << endl;
+            cout << "Array reverse sorted " << endl;
         }
         else
         {
