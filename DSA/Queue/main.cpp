@@ -37,7 +37,7 @@ public:
     }
     void display()
     {
-        if(rear>=front)
+        if(rear>front)
         {
             cout << "Your queue is :" << endl;
             for(int i=0;i<=rear;i++)
