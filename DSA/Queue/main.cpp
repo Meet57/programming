@@ -23,8 +23,12 @@ public:
     {
         if(rear>=front)
         {
-            cout << a[front] << endl;
-            front = front+1;
+            cout << a[front]<< endl;
+            for(int i=0;i<rear;i++)
+            {
+                a[i] = a[i+1];
+            }
+            rear = rear - 1;
         }
         else
         {
@@ -36,7 +40,7 @@ public:
         if(rear>=front)
         {
             cout << "Your queue is :" << endl;
-            for(int i=front;i<=rear;i++)
+            for(int i=0;i<=rear;i++)
             {
                 cout << a[i] << endl;
             }
