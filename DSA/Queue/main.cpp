@@ -3,51 +3,50 @@ using namespace std;
 
 class Queue
 {
-    int a[100],front=0,rear=(-1),i,temp;
+    int a[5],n=5,temp,i,rear=(-1),front=(-1);
 public:
-    void insert()
+    void enqueue()
     {
-        if(rear<100)
+        rear++;
+        if(rear<n)
         {
-            rear = rear + 1;
-            cout << "Enter the value you want to insert : ";
-            cin >> temp;
-            a[rear] = temp;
+            if(rear==0)
+            {
+                front++;
+            }
+            cout << "Enter the value : ";
+            cin >> a[rear];
         }
         else
         {
-            cout << "Queue overflow" << endl;
+            cout << "Queue Overflow" << endl;
         }
     }
-    void pop()
+    void dequeue()
     {
-        if(rear>=front)
+        if(front == -1 || front == n)
         {
-            cout << a[front]<< endl;
-            for(int i=0;i<rear;i++)
-            {
-                a[i] = a[i+1];
-            }
-            rear = rear - 1;
+            cout << "Queue Underflow " << endl;
         }
         else
         {
-            cout << "Queue underflow" << endl;
+            cout << "Deleted Element from the queue is " << a[front] << endl;
+            front++;
         }
     }
     void display()
     {
-        if(rear>front)
+        if(front == (-1) || front == n)
         {
-            cout << "Your queue is :" << endl;
-            for(int i=0;i<=rear;i++)
-            {
-                cout << a[i] << endl;
-            }
+            cout << "Queue us Empty" << endl;
         }
         else
         {
-            cout << "Queue underflow" << endl;
+            cout << "Your Queue is : " << endl;
+            for(i=front;i<=rear;i++)
+            {
+                cout << a[i] << endl;
+            }
         }
     }
 };
@@ -62,7 +61,7 @@ main()
     {
         cout << endl << "-------Queue-------" << endl;
         cout << "1. Enter value in Queue." << endl;
-        cout << "2. Pop value from Queue." << endl;
+        cout << "2. dequeue value from Queue." << endl;
         cout << "3. Display queue." << endl;
         cout << "4. Exit." << endl;
         cout << endl << "Enter your choice : ";
@@ -71,10 +70,10 @@ main()
         switch(choice)
         {
         case 1:
-            qu.insert();
+            qu.enqueue();
             break;
         case 2:
-            qu.pop();
+            qu.dequeue();
             break;
         case 3:
             qu.display();
