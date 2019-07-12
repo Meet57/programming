@@ -24,7 +24,7 @@ public:
     }
     void dequeue()
     {
-        if(front == -1 || front == n)
+        if(rear<front)
         {
             cout << "Queue Underflow " << endl;
         }
@@ -36,7 +36,7 @@ public:
     }
     void display()
     {
-        if(front == (-1) || front == n)
+        if(rear<front)
         {
             cout << "Queue us Empty" << endl;
         }
