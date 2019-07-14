@@ -32,13 +32,19 @@ public:
     {
         if(front==(-1))
         {
-            cout << "Queue Underflow !";
+            cout << "Queue Underflow !" << endl;
+            return;
         }
         else if(front == rear)
         {
             cout << endl << a[front] << " is deleted !" << endl;
             front = -1;
             rear = -1;
+        }
+        else if (front == size-1)
+        {
+            cout << endl << a[front] << " is deleted !" << endl;
+            front = 0;
         }
         else
         {
@@ -54,7 +60,7 @@ public:
             {
                 cout << a[i] <<endl;
             }
-            for(i=0;i<front;i++)
+            for(i=0;i<=rear;i++)
             {
                 cout << a[i] << endl;
             }
