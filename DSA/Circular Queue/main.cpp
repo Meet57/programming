@@ -17,7 +17,7 @@ public:
             front++;
             rear++;
         }
-        else if(rear==4 && front > size)
+        else if(rear==4 && front > 0)
         {
             rear=0;
         }
@@ -54,7 +54,7 @@ public:
             {
                 cout << a[i] <<endl;
             }
-            for(i=rear;i<front;i++)
+            for(i=0;i<front;i++)
             {
                 cout << a[i] << endl;
             }
