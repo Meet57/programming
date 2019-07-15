@@ -65,6 +65,10 @@ public:
                 cout << a[i] << endl;
             }
         }
+        else if(rear == (-1) && front == (-1))
+        {
+            cout << "Queue is empty" << endl;
+        }
         else
         {
             for(i=front;i<=rear;i++)
@@ -72,6 +76,11 @@ public:
                 cout << a[i] << endl;
             }
         }
+    }
+    void flags()
+    {
+        cout << endl << "front : " << front << endl;
+        cout << "rear : " << rear << endl << endl;
     }
 };
 
@@ -81,13 +90,14 @@ main()
     int choice;
     choice = 0;
 
-    while(choice!=4)
+    while(choice!=5)
     {
         cout << endl << "-------Queue-------" << endl;
         cout << "1. Enter value in Queue." << endl;
         cout << "2. dequeue value from Queue." << endl;
         cout << "3. Display queue." << endl;
-        cout << "4. Exit." << endl;
+        cout << "4. Display pointers." << endl;
+        cout << "5. Exit." << endl;
         cout << endl << "Enter your choice : ";
         cin >> choice;
 
@@ -103,6 +113,9 @@ main()
             qu.display();
             break;
         case 4:
+            qu.flags();
+            break;
+        case 5:
             break;
         default:
             cout << "Invalid operation" << endl;
