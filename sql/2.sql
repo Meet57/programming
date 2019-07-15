@@ -1,15 +1,26 @@
-desc emp;
+desc EMP;
 
-alter table emp add constraint my_emp_id_pk primary key(employee_id);
+select * from EMP;
 
-desc departments;
+insert into EMP values (1,'Meet','Patel',56000,'99');
 
-alter table departments add constraint my_dept_id_pk primary key(department_id);
+insert into EMP (employee_id,first_name,last_name,salary,department_id) values (2,'Iti','Patel',57000,'98');
 
-select * from USER_CONSTRAINTS;
+select * from EMP;
 
-select * from user_objects;
+update EMP set salary = '58000' where employee_id = '2';
 
-select object_name,object_type from user_objects where object_name like 'EMP%';
+delete from EMP where employee_id = '2';
 
-select object_name,object_type from user_objects where object_name like 'EMP%' or object_name like 'DEPT%';
+insert into EMP (employee_id,first_name,last_name,salary,department_id) values (2,'Iti','Patel',57000,'98');
+insert into EMP (employee_id,first_name,last_name,salary,department_id) values (3,'Mayur','Patel',61000,'96');
+
+update EMP set last_name = 'Drexler' where employee_id = '3';
+
+update EMP set salary = '1000' where salary < 900;
+
+select * from EMP;
+
+delete from EMP where first_name = 'Mayur' AND last_name = 'Drexler';
+
+commit;
