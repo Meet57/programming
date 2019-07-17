@@ -18,6 +18,21 @@ public:
             }
             cout << "Enter the value : ";
             cin >> temp;
+            for(i=0;i<=rear;i++)
+            {
+                if(temp<a[i])
+                {
+                    for(j=rear;j>i;j--)
+                    {
+                        a[j] = a[j-1];
+                    }
+                    a[i] = temp;
+                }
+                else
+                {
+                    a[rear] = temp;
+                }
+            }
         }
         else
         {
