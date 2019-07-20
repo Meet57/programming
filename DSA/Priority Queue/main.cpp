@@ -1,37 +1,37 @@
 #include <iostream>
 using namespace std;
 
-#define n 5
+#define n 7
 
 class Queue
 {
-    int a[5],temp,i,j,rear=(-1),front=(-1);
+    int a[7],temp,i,j,rear=(-1),front=(-1);
 public:
     void enqueue()
     {
-        rear++;
         if(rear<n)
         {
             if(rear==0)
             {
                 front++;
+                rear++;
             }
             cout << "Enter the value : ";
             cin >> temp;
-            for(i=0;i<=rear;i++)
+            j=rear;
+            while(j!=0)
             {
-                if(temp<a[i])
+                if(temp<a[j])
                 {
-                    for(j=rear;j>i;j--)
+                    cout << j;
+                    for(i=rear;i>=j;i--)
                     {
-                        a[j] = a[j-1];
+                        a[i+1] = a[i];
                     }
-                    a[i] = temp;
+                    a[n] = temp;
                 }
-                else
-                {
-                    a[rear] = temp;
-                }
+                rear = rear + 1;
+                j--;
             }
         }
         else
