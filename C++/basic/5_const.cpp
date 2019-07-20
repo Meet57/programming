@@ -8,8 +8,6 @@ const char NEWLINE = '\n';
 main()
 {
    int area,LENGTH=100; // value changed
-
-
    area = LENGTH * WIDTH;
    cout << area;
    cout << NEWLINE;

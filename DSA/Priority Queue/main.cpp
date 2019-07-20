@@ -19,19 +19,26 @@ public:
             cout << "Enter the value : ";
             cin >> temp;
             j=rear;
-            while(j!=0)
+            if(rear>=1)
             {
-                if(temp<a[j])
+                while(j!=0)
                 {
-                    cout << j;
-                    for(i=rear;i>=j;i--)
+                    if(temp<a[j])
                     {
-                        a[i+1] = a[i];
+                        cout << j;
+                        for(i=rear;i>=j;i--)
+                        {
+                            a[i+1] = a[i];
+                        }
+                        a[n] = temp;
                     }
-                    a[n] = temp;
+                    rear = rear + 1;
+                    j--;
                 }
-                rear = rear + 1;
-                j--;
+            }
+            else
+            {
+                a[rear] = temp;
             }
         }
         else
