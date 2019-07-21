@@ -5,7 +5,7 @@ using namespace std;
 
 class Queue
 {
-    int a[7],temp,i,j,rear=(-1),front=(-1);
+    int a[7],temp,i,j,pos,rear=(-1),front=(-1);
 public:
     void enqueue()
     {
@@ -18,28 +18,19 @@ public:
             }
             cout << "Enter the value : ";
             cin >> temp;
-            j=rear;
-            if(rear>=1)
+            for(i=0;i<=rear;i++)
             {
-                while(j!=0)
+                if(temp<a[i])
                 {
-                    if(temp<a[j])
-                    {
-                        cout << j;
-                        for(i=rear;i>=j;i--)
-                        {
-                            a[i+1] = a[i];
-                        }
-                        a[n] = temp;
-                    }
-                    rear = rear + 1;
-                    j--;
+                    pos=i;
+                    break;
                 }
             }
-            else
+            for(i=rear;i>=pos;i--)
             {
-                a[rear] = temp;
+                a[i+1] = a[i];
             }
+            a[n] = temp;
         }
         else
         {
