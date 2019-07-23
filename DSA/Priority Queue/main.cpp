@@ -7,16 +7,22 @@ class Queue
 public:
     void enqueue()
     {
-        temp++;
         if(rear<n)
         {
-            rear++;
             if(rear==0)
             {
                 front++;
             }
             cout << "Enter the value : ";
             cin >> a[rear];
+            i=rear;
+            while(temp<a[i])
+            {
+                a[i+1]=a[i];
+                i--;
+            }
+            a[i+1]=temp;
+            rear++
         }
         else
         {
@@ -25,11 +31,6 @@ public:
     }
     void dequeue()
     {
-        if(temp!=0)
-        {
-            sort();
-            temp=0;
-        }
         if(rear<front)
         {
             cout << "Queue Underflow " << endl;
@@ -40,28 +41,8 @@ public:
             front++;
         }
     }
-    void sort()
-    {
-        for(i=front; i<=rear; i++)
-            {
-                for(j=i+1; j<=rear; j++)
-                {
-                    if(a[j] < a[i])
-                    {
-                        t = a[i];
-                        a[i] = a[j];
-                        a[j] = t;
-                    }
-                }
-            }
-    }
     void display()
     {
-        if(temp!=0)
-        {
-            sort();
-            temp=0;
-        }
         if(rear<front)
         {
             cout << "Queue us Empty" << endl;
