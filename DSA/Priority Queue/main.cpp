@@ -14,7 +14,7 @@ public:
                 front++;
             }
             cout << "Enter the value : ";
-            cin >> a[rear];
+            cin >> temp;
             i=rear;
             while(temp<a[i])
             {
