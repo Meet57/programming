@@ -22,7 +22,7 @@ public:
                 i--;
             }
             a[i+1]=temp;
-            rear++
+            rear++;
         }
         else
         {
