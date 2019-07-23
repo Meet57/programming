@@ -1,24 +1,22 @@
 #include <iostream>
 using namespace std;
 
-#define n 7
-
 class Queue
 {
-    int a[7],temp,i,j,pos,rear=(-1),front=(-1);
+    int a[5],n=5,temp,t,i,j,rear=(-1),front=(-1);
 public:
     void enqueue()
     {
+        temp++;
         if(rear<n)
         {
+            rear++;
             if(rear==0)
             {
                 front++;
-                rear++;
             }
             cout << "Enter the value : ";
-            cin >> temp;
-
+            cin >> a[rear];
         }
         else
         {
@@ -27,6 +25,11 @@ public:
     }
     void dequeue()
     {
+        if(temp!=0)
+        {
+            sort();
+            temp=0;
+        }
         if(rear<front)
         {
             cout << "Queue Underflow " << endl;
@@ -37,8 +40,28 @@ public:
             front++;
         }
     }
+    void sort()
+    {
+        for(i=front; i<=rear; i++)
+            {
+                for(j=i+1; j<=rear; j++)
+                {
+                    if(a[j] < a[i])
+                    {
+                        t = a[i];
+                        a[i] = a[j];
+                        a[j] = t;
+                    }
+                }
+            }
+    }
     void display()
     {
+        if(temp!=0)
+        {
+            sort();
+            temp=0;
+        }
         if(rear<front)
         {
             cout << "Queue us Empty" << endl;
