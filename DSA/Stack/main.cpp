@@ -3,35 +3,33 @@ using namespace std;
 
 class Stack
 {
-    int a[100],top=(-1),n,temp;
+    int a[100],top=(-1);
 public:
-    void push()
+    void push(int x)
     {
         if(top<100)
         {
             top = top + 1;
-            cout << "Enter the element you want to push : " << endl;
-            cin >> temp;
-            a[top] = temp;
+            a[top] = x;
         }
         else
         {
             cout << "Stack overflow" << endl;
         }
     }
-    void pop()
+    int pop()
     {
         if(top>(-1))
         {
-            cout << "Popped element is : " << a[top];
             top = top - 1;
+            return a[top+1];
         }
         else
         {
-            cout << "Stack underflow " << endl;
+            return false;
         }
     }
-    void peep()
+    void peep(int n)
     {
         if(top<0)
         {
@@ -39,8 +37,6 @@ public:
         }
         else
         {
-            cout << "Which nth element you want to check : " << endl;
-            cin >> n;
             if(n<=top)
             {
                 cout << "The nth element to stack is  : " << a[n] <<endl;
@@ -51,7 +47,7 @@ public:
             }
         }
     }
-    void change()
+    void change(int x,int n)
     {
         if(top<0)
         {
@@ -59,13 +55,9 @@ public:
         }
         else
         {
-            cout << "Which nth element you want to change : " << endl;
-            cin >> n;
             if(n<=top)
             {
-                cout << "New element you want to change with : " << endl;
-                cin >> temp;
-                a[n] = temp;
+                a[n]=x;
             }
             else
             {
@@ -78,7 +70,7 @@ public:
 int main()
 {
     Stack st;
-    int choice;
+    int choice,x,n;
     choice = 0;
 
     while(choice!=5)
@@ -96,16 +88,24 @@ int main()
         switch(choice)
         {
         case 1:
-            st.push();
+            cout << "Enter the element you want to push : " << endl;
+            cin >> x;
+            st.push(x);
             break;
         case 2:
-            st.pop();
+            cout << "Popped element is : " << st.pop();
             break;
         case 3:
-            st.peep();
+            cout << "Which nth element you want to check : " << endl;
+            cin >> n;
+            st.peep(n);
             break;
         case 4:
-            st.change();
+            cout << "Which nth element you want to change : " << endl;
+            cin >> n;
+            cout << "New element you want to change with : " << endl;
+            cin >> x;
+            st.change(x,n);
             break;
         default:
             cout << "Invalid Choice" << endl;

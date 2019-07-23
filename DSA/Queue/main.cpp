@@ -20,6 +20,7 @@ public:
         else
         {
             cout << "Queue Overflow" << endl;
+            rear = n-1;
         }
     }
     void dequeue()

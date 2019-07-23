@@ -1,12 +1,15 @@
 #include <iostream>
 using namespace std;
 
+#define n 5
+
 class Queue
 {
-    int a[5],n=5,temp,t,i,j,rear=(-1),front=(-1);
+    int a[5],temp,i,j,rear=(-1),front=(-1);
 public:
     void enqueue()
     {
+        rear++;
         if(rear<n)
         {
             if(rear==0)
@@ -16,17 +19,19 @@ public:
             cout << "Enter the value : ";
             cin >> temp;
             i=rear;
+            i--;
             while(temp<a[i])
             {
                 a[i+1]=a[i];
                 i--;
             }
             a[i+1]=temp;
-            rear++;
+            cout << rear << endl;
         }
         else
         {
             cout << "Queue Overflow" << endl;
+            rear = n-1;
         }
     }
     void dequeue()
