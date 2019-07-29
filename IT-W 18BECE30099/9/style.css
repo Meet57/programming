@@ -1,0 +1,125 @@
+*{
+  margin: 0px;  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: white;
+}
+
+header{
+  height: 100vh;
+  background-color: black;
+}
+
+nav{
+  width: 100%;  height: 100px;
+  display: flex;
+}
+
+.logo{
+  width: 60%; height: 100px;
+}
+
+.logo h1{
+  line-height: 100px;
+  padding-left: 50px;
+  font-size: 35px;
+  transition: 0.4s ease;
+}
+
+.logo h1:hover{
+  font-size: 40px;
+  color: #00C6A7;
+}
+
+.menu{
+  width: 40%; height: 100px;
+}
+
+.menu ul{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu ul li{
+  list-style-type: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.menu ul li a{
+  text-decoration: none;
+  transition: 0.4s ease;
+  color: #00C6A7;
+  border: 0px solid black;
+}
+
+.menu ul li a:hover{
+  text-decoration: none;
+  color: lightgreen;
+  font-size: 20px;
+  padding: 5px;
+  border-bottom: 1px solid lightgreen;
+  border-top: 1px dotted lightgreen;
+}
+
+section{
+  display: flex;
+}
+
+.leftside{
+  width: 45%;
+  height: auto;
+  overflow: hidden; margin-top: 20px;
+}
+
+.leftside img{
+  width: 400px; height: 400px;
+  margin: 100px;
+  transition: 0.4s ease;
+}
+
+.leftside img:hover{
+  width: 500px; height: 500px;
+  margin: 50px;
+}
+
+.rightside{
+  width: 55%; height: 400px;
+  margin-top: 100px; padding: 20px;
+  text-align: center;
+}
+
+.rightside h2{
+  text-align: center;
+  color: green;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.rightside p{
+  font-size: 1.1rem; padding: 40px 30px;
+}
+
+.rightside a{
+  font-size: 17px;
+  font-weight: 400;
+  padding: 10px;
+  text-transform: capitalize;
+  border-radius: 20px;
+  transition: 0.4s ease;
+  text-decoration: none;
+  border: 1px solid white;
+}
+
+.rightside a:hover{
+  background: linear-gradient(57deg,#00C6A7,#1E4D92);
+  font-size: 22px;
+  font-weight: lighter;
+  padding: 12px;
+  border-radius: 24px;
+}
