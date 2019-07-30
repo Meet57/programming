@@ -1,20 +1,21 @@
 #include <iostream>
 using namespace std;
 
-struct list{
-   int data;
-   struct list *next;
+struct list
+{
+    int data;
+    struct list *next;
 };
 
-list *head=NULL;
-struct list *ptr = NULL;
-
-void insert(int x){
-    if(head==NULL){
+void insert(int x)
+{
+    if(head==NULL)
+    {
         ptr = new list;
         head = ptr;
     }
-    else{
+    else
+    {
         ptr->next = new list;
         ptr = ptr->next;
     }
@@ -22,23 +23,50 @@ void insert(int x){
     ptr->next = NULL;
 }
 
-void display(){
-   struct list *ptr;
-   ptr = head;
-   while (ptr != NULL) {
-      cout<< ptr->data <<" ";
-      ptr = ptr->next;
-   }
+void display()
+{
+    struct list *pr;
+    pr = head;
+    cout <<  endl;
+    if(pr==NULL)
+    {
+        cout << "Linked list is empty" << endl;
+    }
+    else
+    {
+        while (pr != NULL)
+        {
+            cout<< pr->data <<" ";
+            pr = pr->next;
+        }
+    }
 }
 
 main()
 {
-  int d;
-  while(1){
-    cout << "Enter value:" << endl;
-    cin >> d;
-    if(d==-99) break;
-    insert(d);
-  }
-  display();
+    int choice=0,d,n;
+    while(choice!=9)
+    {
+        cout << endl << endl << "-----Linked List-----" << endl;
+        cout << "0. Display" << endl;
+        cout << "1. Insert Value" << endl;
+
+        cout << "Enter your choice : ";
+        cin >> choice;
+
+        switch(choice)
+        {
+            case 0:
+                display();
+                break;
+            case 1:
+                cout << "Enter the value you want to insert : ";
+                cin >> d;
+                insert(d);
+                break;
+            case 2:
+                delete();
+                break;
+        }
+    }
 }
