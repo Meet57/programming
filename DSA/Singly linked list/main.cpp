@@ -9,7 +9,8 @@ struct list
 
 list *head=NULL;
 list *ptr=NULL;
-list *pr,*temp,*prev;
+list *temp,*prev;
+int d;
 
 void insert(int x)
 {
@@ -41,10 +42,10 @@ void InsertFirst(int x)
     }
     else
     {
-        pr = new list;
-        pr->data = x;
-        pr->next = head;
-        head = pr;
+        ptr = new list;
+        ptr->data = x;
+        ptr->next = head;
+        head = ptr;
     }
 }
 
@@ -86,13 +87,13 @@ void reverse()
     else
     {
         temp = head;
-        pr = prev = NULL;
+        ptr = prev = NULL;
         while(temp!=NULL)
         {
-            pr = temp->next;
+            ptr = temp->next;
             temp->next = prev;
             prev = temp;
-            temp = pr;
+            temp = ptr;
         }
         head = prev;
     }
@@ -107,11 +108,11 @@ void display()
     }
     else
     {
-        pr = head;
-        while (pr != NULL)
+        ptr = head;
+        while (ptr != NULL)
         {
-            cout<< pr->data <<" ";
-            pr = pr->next;
+            cout<< ptr->data <<" ";
+            ptr = ptr->next;
         }
     }
 }
@@ -142,9 +143,53 @@ void search(int x)
     }
 }
 
+void sort()
+{
+    temp = head;
+    while(temp!=NULL)
+    {
+        ptr = temp;
+        while(ptr!=NULL)
+        {
+            if(ptr->data < temp->data)
+            {
+                d = temp->data;
+                temp->data = ptr->data;
+                ptr->data = d;
+            }
+            ptr = ptr->next;
+        }
+        temp = temp->next;
+    }
+}
+
+int count()
+{
+    d = 0;
+    temp = head;
+    while(temp!=NULL)
+    {
+        d++;
+        temp = temp->next;
+    }
+    return d;
+}
+
+void deleteall()
+{
+    temp = head;
+    while(temp!=NULL)
+    {
+        prev = temp;
+        temp = temp->next;
+        delete prev;
+    }
+    head=ptr=NULL;
+}
+
 main()
 {
-    int choice=0,d;
+    int choice=0;
     while(choice!=9)
     {
         cout << endl << endl << "-----Linked List-----" << endl;
@@ -154,6 +199,10 @@ main()
         cout << "3. Reverse" << endl;
         cout << "4. Insert Value at first" << endl;
         cout << "5. Search element" << endl;
+        cout << "6. Sort" << endl;
+        cout << "7. Count" << endl;
+        cout << "8. Delete all values" << endl;
+        cout << "9. Exit" << endl;
 
         cout << endl << "Enter your choice : ";
         cin >> choice;
@@ -185,6 +234,17 @@ main()
                 cout << "Enter the element you want to search : ";
                 cin >> d;
                 search(d);
+                break;
+            case 6:
+                sort();
+                break;
+            case 7:
+                cout << "There are " << count() << " elements in linked list" << endl;
+                break;
+            case 8:
+                deleteall();
+                break;
+            case 9:
                 break;
             default:
                 cout << "Invalid choice !!!" << endl;
