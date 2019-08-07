@@ -202,7 +202,8 @@ main()
         cout << "6. Sort" << endl;
         cout << "7. Count" << endl;
         cout << "8. Delete all values" << endl;
-        cout << "9. Exit" << endl;
+        cout << "9. Insert at" << endl;
+        cout << "99. Exit" << endl;
 
         cout << endl << "Enter your choice : ";
         cin >> choice;
@@ -245,6 +246,9 @@ main()
                 deleteall();
                 break;
             case 9:
+                insertat();
+                break;
+            case 99:
                 break;
             default:
                 cout << "Invalid choice !!!" << endl;
