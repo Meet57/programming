@@ -64,27 +64,38 @@ void del(int x)
     }
     else
     {
+        if(L==R)
+        {
+            L = NULL;
+            R = NULL;
+        }
+        temp = R;
+        if(temp!=NULL && temp->data==x)
+        {
+            R = temp->left;
+            R->right = NULL;
+            delete temp;
+            cout << L << " " << R << endl;
+            return;
+        }
         temp = L;
         if(temp!=NULL && temp->data==x)
         {
             L = temp->right;
+            L->left = NULL;
             delete temp;
+            cout << L << " " << R << endl;
             return;
         }
-
-        prev = temp;
-        temp = temp->right;
-
         while(temp!=NULL)
         {
-            if(temp->data==x)
+            if(temp->data == x)
             {
-                next = temp->right;
-                prev->right = next;
-                next->left = prev;
+                temp->left->right = temp->right;
+                cout << L << " " << R << endl;
                 delete temp;
+                return;
             }
-            prev = temp;
             temp = temp->right;
         }
     }
@@ -111,13 +122,14 @@ main()
 {
     int choice=0,d;
 
-    while(choice!=99)
+    while(choice!=4)
     {
         cout << endl << endl << "-----Doubly Linked List-----" << endl;
         cout << "0. Display" << endl;
         cout << "1. Insert Right" << endl;
         cout << "2. Insert Left" << endl;
         cout << "3. Delete" << endl;
+        cout << "4. Exit" << endl;
 
         cout << endl << "Enter your choice : ";
         cin >> choice;
@@ -138,9 +150,12 @@ main()
             insertl(d);
             break;
         case 3:
-            cout << "Delete Value";
+            cout << "Delete Value : ";
             cin >> d;
             del(d);
+            break;
+        case 4:
+            break;
         default:
             cout << "Invalid Choice !!! " << endl;
         }
