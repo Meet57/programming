@@ -64,39 +64,13 @@ void del(int x)
     }
     else
     {
-        if(L==R)
-        {
-            L = NULL;
-            R = NULL;
-        }
-        temp = R;
-        if(temp!=NULL && temp->data==x)
-        {
-            R = temp->left;
-            R->right = NULL;
-            delete temp;
-            cout << L << " " << R << endl;
-            return;
-        }
         temp = L;
         if(temp!=NULL && temp->data==x)
         {
-            L = temp->right;
-            L->left = NULL;
+            R = temp->right;
+            R->left = NULL;
             delete temp;
-            cout << L << " " << R << endl;
             return;
-        }
-        while(temp!=NULL)
-        {
-            if(temp->data == x)
-            {
-                temp->left->right = temp->right;
-                cout << L << " " << R << endl;
-                delete temp;
-                return;
-            }
-            temp = temp->right;
         }
     }
 }
