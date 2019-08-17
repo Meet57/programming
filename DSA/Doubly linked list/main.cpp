@@ -4,86 +4,105 @@ using namespace std;
 struct list
 {
     int data;
-    list *right;
-    list *left;
+    list *right=NULL;
+    list *left=NULL;
 };
 
-list *L=NULL,*R=NULL,*temp,*prev,*next;
+list *head=NULL,*temp,*prev,*last;
 
 void insert(int x)
 {
-    temp = new list;
-    temp->data = x;
-    R = L = temp;
-    temp->right = temp->left = NULL;
-}
-
-void insertl(int x)
-{
-    if(L==NULL && R==NULL)
-    {
-        insert(x);
-        return;
-    }
-    else
-    {
-        prev = L;
-        temp = new list;
-        L = temp;
-        prev->left = temp;
-        temp->right = prev;
-    }
-    temp->data = x;
-    temp->left = NULL;
+    last = new list;
+    last->data = x;
+    last->left = last->right = NULL;
+    head = last;
 }
 
 void insertr(int x)
 {
-    if(L==NULL && R==NULL)
+    if(head==NULL)
     {
         insert(x);
-        return;
     }
     else
     {
-        prev = R;
         temp = new list;
-        R = temp;
-        prev->right = temp;
-        temp->left = prev;
+        temp->data = x;
+        last->right = temp;
+        temp->left = last;
+        last = temp;
     }
-    temp->data = x;
-    temp->right = NULL;
+}
+
+void insertl(int x)
+{
+    if(head==NULL)
+    {
+        insert(x);
+    }
+    else
+    {
+        temp = new list;
+        temp->data = x;
+        temp->right = head;
+        head->left = temp;
+        head = temp;
+    }
 }
 
 void del(int x)
 {
-    if(L==NULL)
+    if(head==NULL)
     {
-        cout << "Linked list is empty" << endl;
+        cout << "List underflow" << endl;
     }
     else
     {
-        temp = L;
+        temp = last;
         if(temp!=NULL && temp->data==x)
         {
-            R = temp->right;
-            R->left = NULL;
+            last = temp->left;
+            last->right = NULL;
             delete temp;
             return;
+        }
+        temp = head;
+        if(temp!=NULL && temp->data==x)
+        {
+            head = temp->right;
+            delete temp;
+            head->left = NULL;
+            return;
+        }
+        temp = temp->right;
+        while(temp!=NULL)
+        {
+            if(temp->data==x)
+            {
+                temp->left->right = temp->right;
+                temp->right->left = temp->left;
+                delete temp;
+                last = head;
+                while(last!=NULL)
+                {
+                    last = last->right;
+                }
+                return;
+            }
+            temp = temp->right;
         }
     }
 }
 
 void display()
 {
-    if(L==NULL)
+    if(head==NULL)
     {
-        cout << "Linked list is empty" << endl;
+        cout << "List underflow" << endl;
     }
     else
     {
-        temp = L;
+        temp = head;
         while(temp!=NULL)
         {
             cout << temp->data << " ";
