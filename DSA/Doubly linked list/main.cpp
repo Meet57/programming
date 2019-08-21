@@ -58,35 +58,22 @@ void del(int x)
     }
     else
     {
-        temp = last;
-        if(temp!=NULL && temp->data==x)
-        {
-            last = temp->left;
-            last->right = NULL;
-            delete temp;
-            return;
-        }
         temp = head;
         if(temp!=NULL && temp->data==x)
         {
             head = temp->right;
-            delete temp;
             head->left = NULL;
+            delete temp;
             return;
         }
         temp = temp->right;
         while(temp!=NULL)
         {
-            if(temp->data==x)
+            if(temp->data=x)
             {
-                temp->left->right = temp->right;
-                temp->right->left = temp->left;
+                prev = temp->left;
+                prev->right = temp->right;
                 delete temp;
-                last = head;
-                while(last!=NULL)
-                {
-                    last = last->right;
-                }
                 return;
             }
             temp = temp->right;
