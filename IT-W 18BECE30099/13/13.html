@@ -1,0 +1,23 @@
+<html>
+<script>
+  function check()
+  {
+    var val = document.getElementById("result").value;
+    if(val== ""){
+      document.getElementById('print').innerHTML = 'Empty';
+      return;
+    }
+    if (val/2==0) {
+      document.getElementById('print').innerHTML = val + ' is a Even number';
+    }
+    else {
+      document.getElementById('print').innerHTML = val + ' is a Odd number';
+    }
+  }
+</script>
+  <body>
+    <input type="text" id="result">
+    <button type="button" onclick="check()">Check</button>
+    <p id="print"></p>
+  </body>
+</html>
