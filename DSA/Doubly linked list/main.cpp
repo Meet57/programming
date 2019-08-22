@@ -10,6 +10,15 @@ struct list
 
 list *head=NULL,*temp,*prev,*last;
 
+void ls()
+{
+    last = head;
+    while(last->right!=NULL)
+    {
+        last = last->right;
+    }
+}
+
 void insert(int x)
 {
     last = new list;
@@ -26,6 +35,7 @@ void insertr(int x)
     }
     else
     {
+        ls();
         temp = new list;
         temp->data = x;
         last->right = temp;
@@ -42,6 +52,7 @@ void insertl(int x)
     }
     else
     {
+        ls();
         temp = new list;
         temp->data = x;
         temp->right = head;
@@ -59,22 +70,36 @@ void del(int x)
     else
     {
         temp = head;
-        if(temp!=NULL && temp->data==x)
-        {
-            head = temp->right;
-            head->left = NULL;
-            delete temp;
-            return;
-        }
-        temp = temp->right;
         while(temp!=NULL)
         {
-            if(temp->data=x)
+            if(temp->data==x)
             {
-                prev = temp->left;
-                prev->right = temp->right;
-                delete temp;
-                return;
+                if(temp->left==NULL && temp->right==NULL)
+                {
+                    head = NULL;
+                    delete temp;
+                    return;
+                }
+                if(temp->left==NULL)
+                {
+                    head = temp->right;
+                    head->left = NULL;
+                    delete temp;
+                    return;
+                }
+                if(temp->right==NULL)
+                {
+                    temp->left->right = NULL;
+                    delete temp;
+                    return;
+                }
+                if(temp->right!=NULL && temp->left!=NULL)
+                {
+                    temp->right->left = temp->left;
+                    temp->left->right = temp->right;
+                    delete temp;
+                    return;
+                }
             }
             temp = temp->right;
         }

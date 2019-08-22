@@ -1,0 +1,28 @@
+<html>
+  <script>
+    function submit()
+    {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var num = document.getElementById("num").value;
+      var fc = document.getElementById("color").value;
+      var hi = document.getElementById("hi").value;
+      if(hi.checked==true)
+      {
+          document.getElementById('print').innerHTML =" hi";
+      }
+    }
+  </script>
+  <body>
+      <fieldset>
+        <legend>Form</legend>
+        Name : <input type="text" id="name"><br>
+        Email : <input type="text" id="email"><br>
+        Number : <input type="number" id="num"><br>
+        <input type="radio" name="hi" value="hi">ca <br>
+        Favourite Color : <input type="text" id="color"><br>
+                  <button type="button" name="submit" onclick=submit()>Submit</button>
+      </fieldset>
+      <p id="Print"></p>
+  </body>
+</html>
