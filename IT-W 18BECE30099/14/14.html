@@ -6,11 +6,13 @@
       var email = document.getElementById("email").value;
       var num = document.getElementById("num").value;
       var fc = document.getElementById("color").value;
-      var hi = document.getElementById("hi").value;
-      if(hi.checked==true)
-      {
-          document.getElementById('print').innerHTML =" hi";
-      }
+      if(document.getElementById('radioMale').checked)
+        var gender = "Male";
+      else
+        var gender = "female";
+
+      string = "Name : " + name + "<br>Email : " + email + "<br>Number : " + num + "<br>Gender : " + gender + "<br>Favourite Color : " + fc;
+      document.getElementById("Print").innerHTML = string;
     }
   </script>
   <body>
@@ -19,7 +21,9 @@
         Name : <input type="text" id="name"><br>
         Email : <input type="text" id="email"><br>
         Number : <input type="number" id="num"><br>
-        <input type="radio" name="hi" value="hi">ca <br>
+        Gender:
+	       <input type="radio" id="radioMale" value="Male">Male</input>
+	       <input type="radio" id="radioFemale" value="Female">Female</input><br>
         Favourite Color : <input type="text" id="color"><br>
                   <button type="button" name="submit" onclick=submit()>Submit</button>
       </fieldset>
