@@ -7,11 +7,13 @@
       document.getElementById('print').innerHTML = 'Empty';
       return;
     }
-    if (val/2==0) {
+    if (val%2==0) {
       document.getElementById('print').innerHTML = val + ' is a Even number';
+      return;
     }
     else {
       document.getElementById('print').innerHTML = val + ' is a Odd number';
+      return;
     }
   }
 </script>
