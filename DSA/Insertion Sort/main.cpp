@@ -1,6 +1,14 @@
 #include<iostream>
 using namespace std;
 
+void print(int arr[],int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
+
 void insertionSort(int arr[],int n)
 {
     int i,j,key;
@@ -15,14 +23,6 @@ void insertionSort(int arr[],int n)
             j = j-1;
         }
         arr[j+1]=key;
-    }
-}
-
-void print(int arr[],int n)
-{
-    for(int i=0;i<n;i++)
-    {
-        cout << arr[i] << " ";
     }
 }
 
