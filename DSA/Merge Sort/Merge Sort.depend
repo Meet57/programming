@@ -1,5 +1,4 @@
 # depslib dependency file v1.0
-1568136414 source:d:\programming\dsa\merge sort\main.cpp
-	<stdlib.h>
-	<stdio.h>
+1568221358 source:d:\programming\dsa\merge sort\main.cpp
+	<iostream>
 
