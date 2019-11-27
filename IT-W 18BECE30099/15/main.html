@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" language="javascript">
+        window.onload = function () {
+            var rotator = document.getElementById("rotator");
+            var images = rotator.getElementsByTagName("img");
+            for (var i = 1; i < images.length; i++) {
+                images[i].style.display = "none";
+            }
+            var counter = 1;
+            setInterval(function () {
+                for (var i = 0; i < images.length; i++) {
+                    images[i].style.display = "none";
+                }
+                images[counter].style.display = "block";
+                counter++;
+                if (counter == images.length) {
+                    counter = 0;
+                }
+            }, 1000);
+        };
+    </script>
+</head>
+<body>
+    <form id="form1">
+    <div id="rotator">
+        <img alt="" src="//www.aspsnippets.com/images/Blue/Logo.png" />
+        <img alt="" src="http://jqueryfaqs.com/images/Blue/Logo.png" />
+        <img alt="" src="http://www.aspforums.net/images/blue/Logo.png" />
+    </div>
+    </form>
+</body>
+</html>
