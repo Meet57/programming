@@ -3,7 +3,7 @@ import java.util.Scanner;
 class Food {
 	static String type;
 	static String title;
-	static int price;
+	static int price;z
 
 	public static String getType() {
 		return type;
