@@ -1,9 +1,12 @@
-lt = list()
-n = int(input("how many numbers you want to insert : "))
+def asd(l):
+    qwe = set(l[0])
+    for i in l[1:]:
+        qwe = qwe & set(i)
 
-for i in range(n):
-    s = "Enter Element " + str(i) + " : "
-    a = int(input(s))
-    lt.append(a)
+    return qwe
 
-print(lt)
+l = ["amisdaf","zicvmxa","qmwiear","yuaiom","hjaiklm"]
+
+tyu = asd(l)
+
+print(tyu)

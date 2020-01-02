@@ -1,5 +1,5 @@
 class complexnumbers:
-    "Iti is my best fnd"
+    "Iti is my best frnd"
     def __init__(self,name):
         self.Name = name
         print(self.Name)
