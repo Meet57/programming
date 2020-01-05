@@ -1,4 +1,4 @@
-//6. Program to implement returning objects.
+//8. Program to implement returning objects.
 
 class Check{
      public int value;
@@ -18,13 +18,11 @@ class Check{
 
 }
 
-class six{
+class eight{
      public static void main(String[] args) {
           Check A = new Check(15);
           Check B = new Check(20);
 
-          Check C = Check.greaterObject(A,B);
-
-          System.out.print(C.value);
+          System.out.print(Check.greaterObject(A,B).value);
      }
 }
