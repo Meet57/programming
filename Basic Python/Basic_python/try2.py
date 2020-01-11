@@ -1,12 +1,13 @@
-def asd(l):
-    qwe = set(l[0])
-    for i in l[1:]:
-        qwe = qwe & set(i)
+def removeMusic(L):
+    final = []
+    common = 'music'
+    for i in L:
+        if common in i:
+            final.append(i)
 
-    return qwe
+    return final
 
-l = ["amisdaf","zicvmxa","qmwiear","yuaiom","hjaiklm"]
+A = ['musiclove','musicvibe','event','motivation','musiclife']
 
-tyu = asd(l)
-
-print(tyu)
+F = removeMusic(A);
+print(F)

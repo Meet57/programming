@@ -1,13 +1,14 @@
 import java.util.*;
 
 class Check{
-     int x;
+     public int x;
      Check(int a){
           x=a;
      }
      void function(){
           Scanner scan = new Scanner(System.in);
-          switch (scan) {
+		  int A = scan.nextInt();
+          switch (A) {
                case 1:
                     Prime();
                     break;
@@ -19,7 +20,7 @@ class Check{
                     break;
           }
      }
-     static void Prime(){
+     void Prime(){
           for (int i=2;i<=x/2;i++) {
                if(x%i==0){
                     System.out.println("Not Prime");
@@ -28,8 +29,8 @@ class Check{
           }
           System.out.println("Prime");
      }
-     static void Palindrome(){
-          int a = x;
+     void Palindrome(){
+		 int a = x;
          int temp=0,r;
          while(x!=0){
              r = x%10;
@@ -43,23 +44,25 @@ class Check{
               System.out.println("Not Palindrome");
          }
      }
-     static void Amstrong(){
-          temp=x;
-         while(x>0)
-         {
-         a=x%10;
-         x=x/10;
-         c=c+(a*a*a);
-         }
-         if(temp==c)
-          System.out.println("armstrong number");
-         else
-             System.out.println("Not armstrong number");
-        }
+     void Amstrong(){
+         int a = x;
+		 int temp=0,c;
+		 while(a>0){
+			 c = a%10;
+			 temp = temp + c*c*c;
+			 a = a/10;
+		 }
+		 if(temp == x){
+			 System.out.println("Amstrong");
+		 }
+		 else{
+			 System.out.println("Not Amstrong");
+		 }
      }
 }
 
-class try{
+
+class meet{
      public static void main(String[] args) {
           Scanner s = new Scanner(System.in);
           int a = s.nextInt();
