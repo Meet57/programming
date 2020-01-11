@@ -4,6 +4,7 @@ class BinarySearchTree{
 
      Node root;
      static final int COUNT = 10;
+     boolean s = false;
 
      class Node{
           int key;
@@ -45,7 +46,7 @@ class BinarySearchTree{
 
      void preOrderRec(Node root){
           if(root != null){
-               System.out.println(root.key);
+               System.out.print(root.key);
                preOrderRec(root.right);
                preOrderRec(root.left);
           }
@@ -92,26 +93,30 @@ class BinarySearchTree{
           return val;
      }
 
-     void print2DUtil(Node root, int space)
-     {
-         if (root == null)
-             return;
-
-         space += COUNT;
-
-         print2DUtil(root.right, space);
-
-         System.out.print("\n");
-         for (int i = COUNT; i < space; i++)
-             System.out.print(" ");
-         System.out.print(root.key + "\n");
-
-         print2DUtil(root.left, space);
+     boolean Search(int key){
+          return search(root,key);
      }
 
-     void print2D()
-     {
-         print2DUtil(root, 0);
+     boolean search(Node root,int key){
+          if (root != null) {
+               if (root.key == key) {
+                    s = true;
+               }
+               else if (root.key < key) {
+                    s = search(root.right,key);
+               }
+               else if (root.key > key) {
+                    s = search(root.left,key);
+               }
+               else{
+                    s = false;
+               }
+          }
+          else{
+               s = false;
+          }
+
+          return s;
      }
 
 }
@@ -123,11 +128,12 @@ class bst{
           int choice=0;
           int temp;
 
-          while(choice!=4){
+          while(choice!=5){
                System.out.println("1.Insert");
                System.out.println("2.Delete");
                System.out.println("3.Print tree");
-               System.out.println("4. Exit");
+               System.out.println("4.Search");
+               System.out.println("5.Exit");
 
                System.out.print("\nEnter your Choice : ");
                choice = scan.nextInt();
@@ -142,9 +148,13 @@ class bst{
                          bst.delete(temp);
                          break;
                     case 3:
-                         bst.print2D();
+                         bst.preOrder();
                          break;
                     case 4:
+                         temp = scan.nextInt();
+                         System.out.println(bst.Search(temp));
+                         break;
+                    case 5:
                          break;
                     default:
                          System.out.println("Wrong input");
