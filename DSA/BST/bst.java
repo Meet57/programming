@@ -46,9 +46,9 @@ class BinarySearchTree{
 
      void preOrderRec(Node root){
           if(root != null){
-               System.out.print(root.key);
-               preOrderRec(root.right);
+               System.out.println(root.key+",");
                preOrderRec(root.left);
+               preOrderRec(root.right);
           }
      }
 
