@@ -45,3 +45,21 @@ Output =>
 error: run() in B cannot override run() in A
        void run(){
 */
+
+class A{
+     final int speed = 100;
+
+}
+
+final class B extends A{
+     final void run(){
+          System.out.println(speed);
+     }
+}
+
+class p18{
+     public static void main(String[] args) {
+          B b = new B();
+          b.run();
+     }
+}
