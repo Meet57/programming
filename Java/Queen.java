@@ -1,13 +1,14 @@
-//0 - blank space
-//8 - queen space
-//1 - blocked space
+//1 - Queen space
+//0 - Blank space
+//5 - Occupied space
 
-class setQueen{
-	static int[][] matrix = new int[10][10];
+class Chess{
+	int[][] matrix = new int[10][10];
+	int[] space = new int[2];
+	int[] result;
 	int i,j,k;
 	
-	//Set all boxes
-	setQueen(){
+	Chess(){
 		for(i=0;i<10;i++){
 			for(j=0;j<10;j++){
 				matrix[i][j] = 0;
@@ -15,66 +16,83 @@ class setQueen{
 		}
 	}
 	
-	//put three queens
-	public void queenSet(){
-		for(k=0;k<3;k++){
-			takePosition();
+	public void placeQueen(){
+		for(k=0;k<5;k++){
+			result = searchPlace();
+			blockSpace(result[0],result[1]);
 		}
-		printBox();
+		printBoard();
 	}
 	
-	//put queen on certain position
-	public void takePosition(){
-		int[] result = searchPosition();
-		blockPosition(result[0],result[1]);
-		matrix[result[0]][result[1]] = 8;
-		i = j = 0;
-	}
-	
-	//blocks the square which is under any queen
-	public void blockPosition(int m,int n){
-		for(i=0;i<6;i++){
-			matrix[m][i] = 1;
-			matrix[i][n] = 1;
-		}
-		i = j = 0;
-	}
-	
-	//return empty space
-	public int[] searchPosition(){
-		int[] ans = new int[2];
+	public int[] searchPlace(){
 		for(i=0;i<10;i++){
 			for(j=0;j<10;j++){
-				if(matrix[i][j] == 0){
-					System.out.println("check");
-					ans[0] = i;
-					ans[1] = j;
-					
-					return ans;
+				if(matrix[i][j]==0){
+					space[0] = i;
+					space[1] = j;
+					return space;
 				}
 			}
 		}
-		ans[0] = 99;
- 		ans[1] = 99;
-		i = j = 0;
-		return ans;
+		return space;
 	}
 	
-	//show you table;
-	void printBox(){
-		for(i=0;i<6;i++){
-			for(j=0;j<6;j++){
-				System.out.print(matrix[i][j]);
+	public void blockSpace(int m,int n){
+		for(i=0;i<10;i++){
+			matrix[i][n] = 5;
+			matrix[m][i] = 5;
+		}
+		i = m;
+		j = n;
+		while(i != 9 && j != 9){
+			try{
+				matrix[i][j] = 5; 
+				i++; j++;
+			}catch(Exception e){}
+		}
+		i = m;
+		j = n;
+		while(i != 9 && j != 9 && i != 0 && j!= 0){
+			try{
+				matrix[i][j] = 5; 
+				i++; j--;
+			}catch(Exception e){}
+		}
+		i = m;
+		j = n;
+		while(i != 9 && j != 9 && i != 0 && j!= 0){
+			try{
+				matrix[i][j] = 5; 
+				i--; j++;
+			}catch(Exception e){}
+		}
+		i = m;
+		j = n;
+		while(i != 0 && j!= 0){
+			try{
+				matrix[i][j] = 5; 
+				i--; j--;
+			}catch(Exception e){}
+		}
+		matrix[m][n] = 1;
+	}
+	
+	public void printBoard(){
+		for(i=0;i<10;i++){
+			for(j=0;j<10;j++){
+				if(matrix[i][j] != 1){k = 0;}
+				else{k = 1;}
+				System.out.print(k + "\t");
 			}
 			System.out.println();
 		}
-		i = j = 0;
 	}
+	
 }
 
 class Queen{
 	public static void main(String[] args){
-		setQueen qs = new setQueen();
-		qs.queenSet();
+		Chess c = new Chess();
+		c.placeQueen();
 	}
 }
