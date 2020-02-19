@@ -46,7 +46,7 @@ error: run() in B cannot override run() in A
        void run(){
 */
 
-/*
+
 class A{
      final int speed = 100;
 
@@ -64,4 +64,3 @@ class p18{
           b.run();
      }
 }
-*/
