@@ -1,0 +1,971 @@
+Receipt No:1001
+
+
+Shrey Satapara
+ci_9
+1
+************************************************
+Receipt No:1002
+
+
+Rishit Bhojak
+ci_6
+13
+
+Rishit Bhojak
+ci_7
+15
+
+Rishit Bhojak
+ci_10
+2
+
+Rishit Bhojak
+mba_3
+1
+
+Rishit Bhojak
+mba_4
+1
+************************************************
+Receipt No:1003
+
+
+Palak Donga
+ci_6
+12
+************************************************
+Receipt No:1004
+
+
+Sanjot Chanchal
+ci_2
+1
+************************************************
+Receipt No:1005
+
+
+Bhavya Vyas
+ci_7
+1
+************************************************
+Receipt No:1006
+
+
+Kapadiya Mit
+ci_7
+2
+************************************************
+Receipt No:1007
+
+
+Ansari Aaftab
+ci_7
+3
+************************************************
+Receipt No:1008
+
+
+Rohan Gothi
+ci_7
+4
+************************************************
+Receipt No:1009
+
+
+Patel Dhairya
+ci_7
+5
+************************************************
+Receipt No:1010
+
+
+Sathwara Jaimin
+ci_8
+4
+
+Mathukia Tirth
+ci_8
+4
+************************************************
+Receipt No:1011
+
+
+Raval Yuvraj
+ci_6
+6
+************************************************
+Receipt No:1012
+
+
+Patel Rutvik
+ci_6
+7
+************************************************
+Receipt No:1013
+
+
+Gajendra Labana
+ci_8
+5
+************************************************
+Receipt No:1014
+
+
+Sonagara Amiraj
+ci_6
+8
+
+Sonagara Amiraj
+ci_7
+13
+************************************************
+Receipt No:1015
+
+
+Patel Vraj
+ci_6
+9
+
+Patel Vraj
+ci_7
+14
+************************************************
+Receipt No:1016
+
+
+Samarth Mistry
+ci_5
+2
+
+Andharia Rohan
+ci_5
+2
+************************************************
+Receipt No:1017
+************************************************
+Receipt No:1018
+
+
+Vandan Gohil
+ci_10
+1
+************************************************
+Receipt No:1019
+
+
+Patel Jay
+ci_2
+3
+************************************************
+Receipt No:1020
+
+
+Jay Soni
+ci_2
+4
+************************************************
+Receipt No:1021
+
+
+Jeet Patel
+ci_6
+14
+
+Jeet Patel
+ci_7
+16
+************************************************
+Receipt No:1022
+
+
+Vivek Modi
+ci_6
+16
+************************************************
+Receipt No:1023
+
+
+Patel Vinay
+ci_6
+15
+************************************************
+Receipt No:1024
+
+
+Patel Prince
+ci_6
+17
+
+patel prince
+ci_7
+71
+************************************************
+Receipt No:1025
+
+
+Patel Dax
+ci_6
+18
+
+patel dax
+ci_7
+85
+************************************************
+Receipt No:1026
+
+
+Jay Shah
+ee_1
+1
+
+Dhaval Patel
+ee_1
+1
+
+Urpit Patel
+ee_1
+1
+
+Vaidish
+ee_1
+1
+
+Deep Panara
+ee_1
+1
+************************************************
+Receipt No:1027
+
+
+Barot Viashang
+ci_6
+40
+************************************************
+Receipt No:1028
+
+
+devi hemal
+ci_5
+7
+
+devi hemal
+ci_6
+41
+************************************************
+Receipt No:1029
+
+
+Mann Shah
+mba_2
+31
+
+Mann Shah
+mba_3
+2
+
+Mann Shah
+mba_4
+2
+
+Mann Shah
+me_2
+4
+************************************************
+Receipt No:1030
+
+
+Vishwajitsinh Rathod
+ci_5
+8
+
+Vishwajeet Singh Rathod
+ci_6
+46
+************************************************
+Receipt No:1031
+
+
+Rajeshwari Jaiswal
+ci_3
+2
+
+Sakshi Chaturvedi
+ci_3
+2
+************************************************
+Receipt No:1032
+
+
+Rajeshwari Jaiswal
+ci_6
+47
+
+Rajeshwari Jaiswal
+ci_9
+8
+************************************************
+Receipt No:1033
+
+
+Sakshi Chaturvedi
+ci_6
+48
+
+Sakshi Chaturvedi
+ci_9
+9
+************************************************
+Receipt No:1034
+
+
+Hetvi Patel
+ci_3
+3
+
+Khushboo Kolhe
+ci_3
+3
+************************************************
+Receipt No:1035
+
+
+Hetvi Patel
+ci_6
+49
+
+Hetvi Patel
+ci_9
+10
+************************************************
+Receipt No:1036
+
+
+Khushboo kolhe
+ci_6
+51
+
+Khushboo Kolhe
+ci_7
+20
+
+Khushboo Kolhe
+ci_10
+3
+************************************************
+Receipt No:1037
+
+
+Patel Jhanvi
+ci_6
+53
+
+Patel Jhanvi
+ci_7
+21
+
+Patel Jhanvi
+ci_9
+11
+************************************************
+Receipt No:1038
+
+
+Khushboo Kolhe
+ci_9
+12
+************************************************
+Receipt No:1039
+
+
+love patel
+cv_1
+8
+
+Aniket Dave
+cv_1
+8
+************************************************
+Receipt No:1040
+
+
+Kaushal Nayak
+ci_6
+54
+************************************************
+Receipt No:1041
+
+
+Aryal Sharma
+ci_6
+55
+************************************************
+Receipt No:1042
+
+
+Teerth Sankesara
+ci_8
+9
+************************************************
+Receipt No:1043
+
+
+Teerth
+ec_1
+1
+
+Vishvam
+ec_1
+1
+
+DHRUMIL
+ec_1
+1
+
+Nisarg
+ec_1
+1
+************************************************
+Receipt No:1044
+
+
+Jay Makwana
+cv_1
+9
+
+Dudhadiya Bhargav
+cv_1
+9
+
+Jay Makwana
+cv_3
+1
+
+Dudhadiya Bhargav
+cv_3
+1
+************************************************
+Receipt No:1045
+
+
+Hiren Madhu
+ci_9
+13
+************************************************
+Receipt No:1046
+
+
+Jay Siddhpura
+ci_9
+15
+************************************************
+Receipt No:1047
+
+
+Kothari Jainam
+ci_2
+7
+************************************************
+Receipt No:1048
+
+
+Rutvik Patel
+ci_7
+22
+************************************************
+Receipt No:1049
+
+
+Rutvik Prajapati
+ci_7
+23
+************************************************
+Receipt No:1050
+
+
+Utsav Prajapati
+ci_7
+24
+************************************************
+Receipt No:1051
+
+
+Aditi
+ci_1
+6
+
+Devangi
+ci_1
+6
+************************************************
+Receipt No:1052
+
+
+Darshan
+cv_1
+10
+
+Vinit
+cv_1
+10
+************************************************
+Receipt No:1053
+
+
+Rutvik
+cv_1
+11
+
+Ronak
+cv_1
+11
+
+Chirag
+cv_1
+11
+************************************************
+Receipt No:1054
+
+
+Patel Utsav
+ci_2
+8
+
+Patel Utsav
+ci_8
+10
+************************************************
+Receipt No:1055
+
+
+Sweety bhatia
+ci_2
+9
+
+Sweety Bhatia
+ci_5
+9
+************************************************
+Receipt No:1056
+
+
+Patodiya Yash
+cv_1
+12
+
+Vaghela Jayesh
+cv_1
+12
+
+Patodiya Yash
+cv_2
+3
+
+Vaghela Jayesh
+cv_2
+3
+
+Patodiya Yash
+cv_3
+2
+
+Vaghela Jayesh
+cv_3
+2
+************************************************
+Receipt No:1057
+
+
+Parmar Vishwajitsinh
+ci_8
+11
+************************************************
+Receipt No:1058
+
+
+Om Jivani
+ci_8
+12
+
+Darshan Patel
+ci_8
+12
+************************************************
+Receipt No:1059
+
+
+Patel Punit
+ci_2
+19
+************************************************
+Receipt No:1060
+
+
+Patel Sahil
+ci_2
+20
+************************************************
+Receipt No:1061
+
+
+Khushboo kolhe
+ci_8
+18
+
+Prutha Chudasama
+ci_8
+18
+************************************************
+Receipt No:1062
+
+
+Deep Patel
+ec_2
+9
+
+Jimit Oza
+ec_2
+9
+
+Vishesh Rohila
+ec_2
+9
+************************************************
+Receipt No:1063
+
+
+Krina Vaghela
+ci_3
+5
+
+Prutha Chudasama
+ci_3
+5
+************************************************
+Receipt No:1064
+
+
+krina Vaghela
+ci_6
+58
+************************************************
+Receipt No:1065
+
+
+Prutha Chudasama
+ci_9
+19
+************************************************
+Receipt No:1066
+
+
+Ronak
+ec_1
+2
+
+Vivek
+ec_1
+2
+
+Mahima
+ec_1
+2
+************************************************
+Receipt No:1067
+
+
+Ronak Vadodariya
+ci_6
+59
+************************************************
+Receipt No:1068
+
+
+Vishu Chaudhary
+ci_6
+60
+************************************************
+Receipt No:1069
+
+
+Om Patel
+ci_6
+61
+************************************************
+Receipt No:1070
+
+
+Vyas Pragvansh
+ci_11
+4
+************************************************
+Receipt No:1071
+
+
+Patel Harshal
+ci_7
+29
+************************************************
+Receipt No:1072
+
+
+Patel Rushi
+ci_7
+30
+************************************************
+Receipt No:1073
+
+
+soni vraj
+ci_2
+11
+************************************************
+Receipt No:1074
+
+
+chodavadiya Akshay
+ci_2
+12
+************************************************
+Receipt No:1075
+
+
+Arya Patel
+ci_2
+13
+************************************************
+Receipt No:1076
+
+
+Jagriti Rai
+ci_2
+14
+************************************************
+Receipt No:1077
+
+
+Piyush Bagani
+ci_5
+11
+
+Rohan brahmbhatt
+ci_5
+11
+************************************************
+Receipt No:1078
+
+
+Nandini Gohel
+ci_2
+15
+
+nandini gohel
+ci_3
+8
+
+palak darji
+ci_3
+8
+************************************************
+Receipt No:1079
+
+
+Patel devanshi
+ci_5
+12
+
+Patel jhanvi
+ci_5
+12
+************************************************
+Receipt No:1080
+
+
+Devi Hemal
+ci_8
+19
+************************************************
+Receipt No:1081
+
+
+Krupesh Raval
+ci_6
+73
+
+Krupesh Raval
+ci_7
+35
+************************************************
+Receipt No:1082
+
+
+Heli patel
+ci_2
+21
+************************************************
+Receipt No:1083
+
+
+Patel Krima
+ci_2
+22
+************************************************
+Receipt No:1084
+
+
+Patel Krushi
+ci_2
+23
+************************************************
+Receipt No:1085
+
+
+meer Parth
+ci_2
+24
+************************************************
+Receipt No:1086
+
+
+Barot Vrushang
+ci_8
+21
+************************************************
+Receipt No:1087
+
+
+Shah Neel
+ci_7
+36
+************************************************
+Receipt No:1088
+
+
+Patel Femin
+ci_7
+37
+************************************************
+Receipt No:1089
+
+
+Patel Riyan
+ci_7
+38
+************************************************
+Receipt No:1090
+
+
+Patel Dev
+ci_7
+39
+************************************************
+Receipt No:1091
+
+
+Patel Yash
+ci_7
+40
+************************************************
+Receipt No:1092
+
+
+Patel Shreyansh
+ci_7
+41
+************************************************
+Receipt No:1093
+
+
+motka Deep
+ci_5
+19
+
+Joshi Tirth
+ci_5
+19
+************************************************
+Receipt No:1094
+
+
+Tahiliani Mohit
+ci_8
+22
+
+Ambani Yash
+ci_8
+22
+************************************************
+Receipt No:1095
+
+
+Mohit tahilipani
+ci_6
+75
+
+mohit tahiliani
+ci_7
+43
+************************************************
+Receipt No:1096
+
+
+Yash Ambani
+ci_6
+77
+
+Yash Ambani
+ci_7
+44
+************************************************
+Receipt No:1097
+
+
+ansh
+ci_11
+7
+
+chirayu
+ci_11
+7
+
+arya
+ci_11
+7
+
+harshil
+ci_11
+7
+
+jarnil
+ci_11
+7
+************************************************
+Receipt No:1098
+
+
+Patel Dharmik
+ci_6
+78
+************************************************
+Receipt No:1099
+
+
+amit yadav
+me_4
+3
+
+rathod shivam
+me_4
+3
+
+faisal
+me_4
+3
+************************************************
+Receipt No:1100
+
+
+Patel Dhaval
+ci_6
+79
+************************************************
