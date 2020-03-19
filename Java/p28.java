@@ -1,6 +1,16 @@
 //28. Program to demonstrate synchronize keyword.
 
-class Table{
+class caller extends Thread{
+	int n;
+	caller(int n){
+		this.n = n;
+	}
+	public void run(){
+		p28.table(n);
+	}
+}
+
+class p28{
 	static synchronized void table(int n){
 		try{
 			for(int i=1;i<=5;i++){
@@ -11,19 +21,6 @@ class Table{
 			System.out.println(e);
 		}
 	}
-}
-
-class caller extends Thread{
-	int n;
-	caller(int n){
-		this.n = n;
-	}
-	public void run(){
-		Table.table(n);
-	}
-}
-
-class p28{
 	public static void main(String[] args){
 		caller t1 = new caller(2);
 		caller t2 = new caller(11);

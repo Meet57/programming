@@ -19,8 +19,7 @@ class B implements Runnable{
 class p26{
 	public static void main(String[] args){
 		new A();
-		B b = new B();
-		Thread t = new Thread(b);
+		Thread t = new Thread(new B());
 		
 		t.start();
 	}
