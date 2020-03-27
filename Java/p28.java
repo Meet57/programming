@@ -24,7 +24,7 @@ class p28{
 	public static void main(String[] args){
 		caller t1 = new caller(2);
 		caller t2 = new caller(11);
-		
+
 		t1.start();
 		t2.start();
 	}
