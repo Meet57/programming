@@ -29,7 +29,7 @@ while True:
 
             face = cv2.cvtColor(face,cv2.COLOR_BGR2GRAY)
 
-            file_name_path = 'D:/programming/Basic Python/OpenCV/faces/user' + str(count) + '.jpg'
+            file_name_path = 'D:/programming/Basic Python/OpenCV/user/' + str(count) + '.jpg'
 
             cv2.imwrite(file_name_path,face)
 
@@ -43,6 +43,6 @@ while True:
     if cv2.waitKey(1)==13 or count==30:
         break
 
-cap.release()
 cv2.destroyAllWindows()
 print("Collecting Samples Complete")
+cap.release()

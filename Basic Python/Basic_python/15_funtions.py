@@ -4,7 +4,6 @@ def add(a,b):
 def prin():
     print('Your answer is:')
 
-
 print('start=')
 x = int(input("Number 1:"))
 y = int(input("Number 2:"))

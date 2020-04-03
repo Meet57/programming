@@ -1,10 +1,18 @@
-def firstDuplicate(a):
-    for i in range(len(a) - 1):
-        if a[i] in a[i + 1:]:
-            return a[i]
+a = [-1, 150, 190, 170, -1, -1, 160, 180]
 
-    return -1
+n = len(a)
 
+for i in range(n):
+    if a[i] == -1:
+        continue
+    else:
+        for j in range(i + 1, n):
+            if a[j] == -1:
+                continue
+            else:
+                if a[i] > a[j]:
+                    temp = a[i]
+                    a[i] = a[j]
+                    a[j] = temp
 
-a = [8, 4, 6, 2, 6, 4, 7, 9, 5, 8]
-print(firstDuplicate(a))
+print(a)
