@@ -17,7 +17,7 @@ class B extends A{
      }
 }
 
-class 16{
+class p16{
      public static void main(String[] args) {
           B b = new B();
           b.run();
