@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrow Function</h2>
+
+<p>This example shows an Arrow Function without the brackets or the return keyword.</p>
+
+<p id="demo"></p>
+
+<script>
+
+hello = () => "Hello World!";
+document.getElementById("demo").innerHTML = hello();
+
+hello2 = (fname,lname) => fname + " " + lname;
+document.getElementById("demo").innerHTML += ("<br>" + hello2("Meet","Patel"));
+
+</script>
+
+</body>
+</html>

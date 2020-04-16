@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        
+        var a = {
+            fname : 'Yahoo',
+            lname : 'baba',
+            age : 25,
+            email : 'abc@xyz.com',
+            arr : ['a','b','c'],
+            salary : function(){
+                return 25000;
+            },
+            fulname : function(){
+                return this.fname + " " + this.lname;
+            }
+        }        
+        
+        document.write(a.fulname());
+        document.write(" "+a.salary()+"<br>");       
+
+
+        
+        function Student(name,age){
+            this.name = name;
+            this.age = age;
+            this.getdetails = function(){
+                return name + " " + age;
+            }
+        }
+
+        var s1 = new Student("Meet",18);
+        var s2 = new Student("Mayur",19);
+
+        document.write(s1.getdetails());
+        document.write("<br>"+s2.getdetails());
+
+    </script>
+</body>
+</html>

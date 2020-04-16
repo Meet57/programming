@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>JavaScript StopWatch</h2>
+    <i><p id="time"></p></i>
+    <p id="demo"></p>
+    
+    <script>
+
+        /*
+        function person(name,age,color){
+            this.name = name;
+            this.age = age;
+            this.favColor = color;
+            this.changename = function(name){
+                this.name = name;
+            }
+            this.year = BornYear(this.age);
+        }
+
+        var v1 = ["a","b","c"];
+        var v2 = ["d","e"];
+
+        var v = v1.concat(v2);
+
+        function BornYear(age){
+            return 2020 - age;
+        } 
+        
+        var p1 = new person("meet",42,"green");
+        var p2 = new person("mayur",62,"red");
+        p1.changename("amit");
+        */
+
+        var h = 0;
+        var m = 0;
+        var s = 0;
+
+        function iinc(){
+            s++;
+            if(s==60){
+                s=0;
+                m++;
+            }
+            if(m==60){
+                m=0;
+                h++;
+            }
+            document.getElementById("demo").innerHTML = h + ":" + m + ":" + s;
+        }
+
+        setInterval(iinc,1000);
+
+        function printtime(){
+            var d = new Date();
+            var s = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + ":" +d.getMilliseconds();
+            document.getElementById("time").innerHTML = s;
+        }
+
+        setInterval(printtime,1);
+
+    </script>
+
+</body>
+
+</html>
