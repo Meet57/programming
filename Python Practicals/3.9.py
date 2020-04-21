@@ -8,5 +8,5 @@ for i in x:
 if (x==w): 
     print("YES")     
 else:
-    print("no")
+    print("No")
 	
