@@ -16,7 +16,7 @@ plt.pie(slices,
         colors = cols,
         startangle=90,
         shadow=True,
-        explode=(0,0.1,0,0.2),
+        explode=(0,0.1,0,0.1),
         autopct='%1.1f%%')
 
 #plt.xlabel('X')
