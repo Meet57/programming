@@ -1,0 +1,67 @@
+<html>
+    <head>
+      <style>
+            button{
+                width:100px;
+                height:40px;
+            }
+            table {
+              width:100%;
+              height:100%;
+            }
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            th, td {
+            font-size: xx-large;
+              padding: 15px;
+              text-align: left;
+            }
+            table#t01 tr:nth-child(even) {
+              background-color: #eee;
+            }
+            table#t01 tr:nth-child(odd) {
+             background-color: #fff;
+            }
+            table#t01 th {
+              background-color: black;
+              color: white;
+            }
+            input{
+                font-size: xx-large;
+                height:100%;
+                width:100%;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="store.php" method="GET">
+            <table align="center">
+                <tr>
+                    <td><h2>Company</h2></td>
+                    <td><input type="text" name="company"></td>
+                </tr>
+                <tr>
+                    <td><h2>Model</h2></td>
+                    <td><input type="text" name="model"></td>
+                </tr>
+                <tr>
+                    <td><h2>Ram</h2></td>
+                    <td><input type="text" name="ram"></td>
+                </tr>
+                <tr>
+                    <td><h2>Stock</h2></td>
+                    <td><input type="number" name="stock"></td>
+                </tr>
+                <tr>
+                    <td><h2>Price</h2></td>
+                    <td><input type="number" name="price"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

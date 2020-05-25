@@ -10,7 +10,11 @@ public:
   {
     i = r = 0;
   }
-  Complex(int x,int y=0)
+  Complex(int x)
+  {
+    r = x;   i = 0;
+  }
+  Complex(int x,int y)
   {
     r = x;   i = y;
   }

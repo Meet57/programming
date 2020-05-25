@@ -1,59 +1,45 @@
 #include <iostream>
-#include <string.h>
-
 using namespace std;
 
-class SHAPE
-{
-protected:
-  double d1,d2;
-public:
-  void getdata()
-  {
-    cin >> d1;
-    cin >> d2;
-  }
-  virtual double area()=0;
+class stu{
+  private:
+      int mark;
+      float weight;
+  public:
+    int age;
+    void set_marks(int a){
+      mark = a;
+    }
+    void set_age(int a){
+      age = a;
+    }
+    void set_weight(float a){
+      weight = a;
+    }
+    void setter(int a,int b,float c);
+    int get_mark(){
+      return mark;
+    }  
+    float get_weight(){
+      return weight;
+    }  
 };
 
-class TRIANGLE : public SHAPE
+void stu :: setter(int a,int b,float c){
+  mark = a;
+  age = b;
+  weight =c;
+}
+
+int main()
 {
-public:
-  double area()
-  {
-    return (0.5*d1*d2);
-  }
-};
-
-class RECTANGLE : public SHAPE
-{
-public:
-  double area()
-  {
-    return (d1*d2);
-  }
-};
-
-main()
-{
-  SHAPE *ptr;
-  char op;
-  std::cout << "Enter t for triangle or r for Rectangle:" << '\n';
-  cin >> op;
-
-  if(op=='t')
-  {
-    TRIANGLE t;
-    ptr = &t;
-    std::cout << "Enter base and height of triangle:" << '\n';
-  }
-  else
-  {
-    RECTANGLE r;
-    ptr = &r;
-    std::cout << "Enter lenght and bredth of rectangle:" << '\n';
-  }
-
-  ptr->getdata();
-  std::cout << "Area:" << ptr->area() << '\n';
+    stu s1,s2,s3;
+    s1.setter(20,19,11.11);
+    s2.setter(19,19,22.22);
+    s2.setter(18,18,18.18);
+    s1.set_weight(19.19);
+    
+    //cout << s1.weight << endl;
+    
+    return 0;
 }

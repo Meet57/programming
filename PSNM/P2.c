@@ -4,8 +4,8 @@
 #include<conio.h>
 #include<math.h>
 #define ESP 0.0001
-#define F(x) 3*(x) - 1 - cos(x)
-void main()
+#define F(x) x - 2*sin(x)
+int main()
 {
   float x0,x1,x2,f1,f2,f0;
   int count=0;
@@ -20,7 +20,7 @@ void main()
   scanf("%f",&x1);
   }while(F(x1) < 0);
   printf("\n__________________________________________________________\n");
-  printf("\n    x0\t       x1\t x2\t   f0\t   f1\t   f2");
+  printf("\nx0\tx1\tx2\tf(x2)");
   printf("\n__________________________________________________________\n");
   do
   {
@@ -28,7 +28,7 @@ void main()
   f1=F(x1);
   x2=x0-((f0*(x1-x0))/(f1-f0));
   f2=F(x2);
-  printf("\n%f %f %f %f %f %f",x0,x1,x2,f0,f1,f2);
+  printf("\n%f\t%f\t%f\t%f",x0,x1,x2,f2);
   if(f0*f2<0)
    {
     x1=x2;
@@ -41,5 +41,7 @@ void main()
 printf("\n__________________________________________________________\n");
 printf("\n\nApp.root = %f",x2);
 getch();
+
+return 0;
 }
 

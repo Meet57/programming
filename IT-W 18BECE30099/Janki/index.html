@@ -1,0 +1,62 @@
+<html>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <body>
+        <div class="Upper">
+            <?php
+                $servername = "localhost";
+                $username = "id11937044_root";
+                $password = "root123";
+                $dbname = "id11937044_test";
+            
+                
+                // Create connection
+                $conn = mysqli_connect($servername, $username, $password, $dbname);
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+                $sql = 'SELECT company,stock from `Janki`';
+                $result = $conn->query($sql);
+                
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        if($row["company"] == 'Samsung'){
+                            $samsung += $row['stock'];
+                        }
+                        elseif($row["company"] == 'Vivo'){
+                            $vivo += $row['stock'];
+                        }
+                        elseif($row["company"] == 'Oppo'){
+                            $oppo += $row['stock'];
+                        }
+                    }
+                } else {
+                    echo "0 results";
+                }
+                
+                echo '
+                    <Table>
+                        <tr>
+                            <th>Samsung</th>
+                            <td>'.$samsung.'</td>
+                        </tr>
+                        <tr>
+                            <th>Oppo</th>
+                            <td>'.$oppo.'</td>
+                        </tr>
+                        <tr>
+                            <th>Vivo</th>
+                            <td>'.$vivo.'</td>
+                        </tr>
+                    </Table>
+                ';
+            ?>
+        </div>
+        <div class="Lower">
+            <a href="asset/data.php"><button>Stock</button></a>
+            <a href="asset/edit.php"><button>Edit</button></a><br>
+            <a href="asset/janki.html"><button>New</button></a>
+            <a href="backup/backup.php"><button>Backup</button></a>
+        </div>
+    </body>
+</html>
