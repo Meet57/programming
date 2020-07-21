@@ -40,44 +40,35 @@ class stack{
     }
 }
 
-class a1 {
+class b1 {
     public static void main(String[] args) {
         stack s = new stack(10);
-        // Scanner scan = new Scanner(System.in);
-        // int choice = 9;
-        // while(true){
-        //     System.out.println("1.Push");
-        //     System.out.println("2.pop");
-        //     System.out.println("3.peek");
-        //     System.out.println("4.exit");
-        //     choice = scan.nextInt();
-        //     switch(choice){
-        //         case 1:
-        //             System.out.println("Enter Value : ");
-        //             scan.nextLine();
-        //             s.push(scan.nextLine());
-        //             break;
-        //         case 2:
-        //             System.out.println(s.pop());
-        //             break;
-        //         case 3:
-        //             System.out.println(s.peek());
-        //             break;
-        //         case 4:
-        //             break;
-        //     }
-        //     if(choice == 4){
-        //         break;
-        //     }
-        // }
-        s.push("Dhruv");
-        s.push("Narendra");
-        s.push("Dharmistha");
-        s.push("Meet");
-
-        System.out.println(s.pop());
-        System.out.println(s.pop());
-        System.out.println(s.pop());
-        System.out.println(s.pop());
+        Scanner scan = new Scanner(System.in);
+        int choice = 9;
+        while(true){
+            System.out.println("1.Push");
+            System.out.println("2.pop");
+            System.out.println("3.peek");
+            System.out.println("4.exit");
+            choice = scan.nextInt();
+            switch(choice){
+                case 1:
+                    System.out.println("Enter Value : ");
+                    scan.nextLine();
+                    s.push(scan.nextLine());
+                    break;
+                case 2:
+                    System.out.println(s.pop());
+                    break;
+                case 3:
+                    System.out.println(s.peek());
+                    break;
+                case 4:
+                    break;
+            }
+            if(choice == 4){
+                break;
+            }
+        }
     }
 }

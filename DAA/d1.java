@@ -1,5 +1,7 @@
 //1c. A stack using queue
 
+import java.util.*;
+
 class queue{
     private String a[],temp;
     private int top;
@@ -63,14 +65,28 @@ public class d1 {
     public static void main(String[] args) {
         stack s = new stack();
 
-        s.push("Narendra");
-        s.push("Dharmistha");
-        s.push("Dhruv");
-        s.push("Meet");
-
-        System.out.println(s.pop());
-        System.out.println(s.pop());
-        System.out.println(s.pop());
-        System.out.println(s.pop());
+        Scanner scan = new Scanner(System.in);
+        int choice = 9;
+        while(true){
+            System.out.println("1.Push");
+            System.out.println("2.pop");
+            System.out.println("3.exit");
+            choice = scan.nextInt();
+            switch(choice){
+                case 1:
+                    System.out.println("Enter Value : ");
+                    scan.nextLine();
+                    s.push(scan.nextLine());
+                    break;
+                case 2:
+                    System.out.println(s.pop());
+                    break;
+                case 3:
+                    break;
+            }
+            if(choice == 3){
+                break;
+            }
+        }
     }
 }

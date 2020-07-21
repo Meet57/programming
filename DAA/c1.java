@@ -1,4 +1,6 @@
 //1c. A queue using stack
+ 
+import java.util.*;
 
 class stack{
     private String[] a;
@@ -61,14 +63,28 @@ class queue{
 class c1{
     public static void main(String[] args) {
         queue q = new queue();
-        q.enQueue("Meet"); 
-        q.enQueue("Dhruv"); 
-        q.enQueue("Narendra"); 
-
-        System.out.println(q.deQueue());
-        q.enQueue("Dharmistha");
-        System.out.println(q.deQueue()); 
-        System.out.println(q.deQueue());
-        System.out.println(q.deQueue());
+        Scanner scan = new Scanner(System.in);
+        int choice = 9;
+        while(true){
+            System.out.println("1.Enqueue");
+            System.out.println("2.Dequeue");
+            System.out.println("3.exit");
+            choice = scan.nextInt();
+            switch(choice){
+                case 1:
+                    System.out.println("Enter Value : ");
+                    scan.nextLine();
+                    q.enQueue(scan.nextLine());
+                    break;
+                case 2:
+                    System.out.println(q.deQueue());
+                    break;
+                case 3:
+                    break;
+            }
+            if(choice == 3){
+                break;
+            }
+        }
     }
 }

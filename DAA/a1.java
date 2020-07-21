@@ -1,4 +1,5 @@
 //1 a queue
+import java.util.Scanner;
 
 class queue{
     private String a[],temp;
@@ -31,18 +32,32 @@ class queue{
     }
 }
 
-public class b1 {
+public class a1 {
     public static void main(String[] args) {
         queue q = new queue(5);
         
-        q.enqueue("Meet");
-        q.enqueue("Dhruv");
-        q.enqueue("Narendra");
-        q.enqueue("Dharmistha");
-        
-        System.out.println(q.dequeue());
-        System.out.println(q.dequeue());
-        System.out.println(q.dequeue());
-        System.out.println(q.dequeue());
+        Scanner scan = new Scanner(System.in);
+        int choice = 9;
+        while(true){
+            System.out.println("1.Enqueue");
+            System.out.println("2.Dequeue");
+            System.out.println("3.exit");
+            choice = scan.nextInt();
+            switch(choice){
+                case 1:
+                    System.out.println("Enter Value : ");
+                    scan.nextLine();
+                    q.enqueue(scan.nextLine());
+                    break;
+                case 2:
+                    System.out.println(q.dequeue());
+                    break;
+                case 3:
+                    break;
+            }
+            if(choice == 4){
+                break;
+            }
+        }
     }
 }
