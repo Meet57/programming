@@ -30,6 +30,18 @@ class queue{
             return "Queue Underflow";
         }
     }
+    public String search(String x) {
+        if (top != -1) {
+            for(int i=0;i<=top;i++){
+                if(a[i].equals(x)){
+                    return "Index : "+Integer.toString(i);
+                }else{
+                    return "Value not Found";
+                }
+            }
+        }        
+        return "Queue Underflow";
+    }
 }
 
 public class a1 {
@@ -39,9 +51,10 @@ public class a1 {
         Scanner scan = new Scanner(System.in);
         int choice = 9;
         while(true){
-            System.out.println("1.Enqueue");
-            System.out.println("2.Dequeue");
-            System.out.println("3.exit");
+            System.out.print("1.Enqueue\t");
+            System.out.print("2.Dequeue\t");
+            System.out.print("3.search\t");
+            System.out.println("4.exit");
             choice = scan.nextInt();
             switch(choice){
                 case 1:
@@ -53,6 +66,11 @@ public class a1 {
                     System.out.println(q.dequeue());
                     break;
                 case 3:
+                    System.out.println("Enter Value : ");
+                    scan.nextLine();
+                    System.out.println(q.search(scan.nextLine()));
+                    break;
+                case 4:
                     break;
             }
             if(choice == 4){

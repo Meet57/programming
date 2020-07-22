@@ -31,12 +31,17 @@ class stack{
         }
     }
 
-    public String peek() {
+    public String search(String x) {
         if (top != -1) {
-            return a[top];
-        } else {
-            return "Stack Underflow";
-        }
+            for(int i=0;i<=top;i++){
+                if(a[i].equals(x)){
+                    return "Index : "+Integer.toString(i);
+                }else{
+                    return "Value not Found";
+                }
+            }
+        }        
+        return "Stack Underflow";
     }
 }
 
@@ -46,9 +51,9 @@ class b1 {
         Scanner scan = new Scanner(System.in);
         int choice = 9;
         while(true){
-            System.out.println("1.Push");
-            System.out.println("2.pop");
-            System.out.println("3.peek");
+            System.out.print("1.Push\t");
+            System.out.print("2.pop\t");
+            System.out.print("3.search\t");
             System.out.println("4.exit");
             choice = scan.nextInt();
             switch(choice){
@@ -61,7 +66,9 @@ class b1 {
                     System.out.println(s.pop());
                     break;
                 case 3:
-                    System.out.println(s.peek());
+                    System.out.println("Enter Value : ");
+                    scan.nextLine();
+                    System.out.println(s.search(scan.nextLine()));
                     break;
                 case 4:
                     break;
