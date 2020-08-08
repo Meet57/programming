@@ -36,10 +36,9 @@ class stack{
             for(int i=0;i<=top;i++){
                 if(a[i].equals(x)){
                     return "Index : "+Integer.toString(i);
-                }else{
-                    return "Value not Found";
                 }
             }
+            return "Value not found";
         }        
         return "Stack Underflow";
     }
