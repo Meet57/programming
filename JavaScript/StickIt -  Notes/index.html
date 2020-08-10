@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Sticky Notes</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="manifest" href="manifest.json" />
+        <link rel="icon" href="contract.png" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <div class="heading">
+            <h1>Stick-IT notes</h1>
+            <p id="ts">By Meet Patel</p>
+        </div>
+        <div class="form">
+            <form id="inputForm">
+                <input type="text" name="title" id="new-note-title-input" class="inputText" placeholder="Title" autocomplete="off" autofocus required>
+                <input type="text" name="content" id="new-note-body-input" class="inputText" placeholder="Content" autocomplete="off" required>
+                <button type="submit" class="btn">Create Note</button>
+            </form>
+        </div>
+        <h3 id="no-notes">No Notes found, Add One !</h3>
+
+        <ul id="notes">
+        </ul>
+        <script src="js/script.js"></script>
+    </body>
+</html>
