@@ -7,7 +7,7 @@
     $sql = " update `$tbname` SET ";
 
     for($i=0;$i<count($cn);$i++){
-        $sql .= $cn[$i] . '="'.$_POST[$cn[$i]].'"' ;
+        $sql .= '`'. $cn[$i] . '`="'.$_POST[$cn[$i]].'"' ;
         if($i!=(count($cn)-1)){
             $sql .= ", ";
         }
@@ -16,9 +16,13 @@
     $sql .= " where ID = ".$_POST['ID']." ";
 
 
+echo "<br><br>";
+	echo $sql;
+	echo "<br><br>";
+
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
-        header("refresh:1;url=edit.php");        
+        header("refresh:5;url=bedit.php");        
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

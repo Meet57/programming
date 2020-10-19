@@ -4,8 +4,8 @@
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "lectrolights";
-        $tbname = "product";
+        $dbname = "shop";
+        $tbname = "janki";
         
         // Create connection
         $conn = mysqli_connect($servername, $username, $password, $dbname);

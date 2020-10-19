@@ -12,7 +12,7 @@
         include_once("conn.php");
     ?>
 
-    <form method="post" action="assets/submit.php">
+    <form method="post" action="submit.php">
         <table>
 
             <?php
